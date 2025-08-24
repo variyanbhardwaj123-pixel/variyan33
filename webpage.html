@@ -1,0 +1,571 @@
+
+
+<br> <br>
+<br>
+<br>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dice Roller</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+      margin-top: 100px;
+    }
+    #dice {
+      font-size: 100px;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎲 Dice Roller</h1>
+  <div id="dice">🎲</div>
+  <button onclick="rollDice()">Roll Dice</button>
+
+  <script>
+    function rollDice() {
+      const diceFaces = ['⚀','⚁','⚂','⚃','⚄','⚅'];
+      const random = Math.floor(Math.random() * 6);
+      document.getElementById('dice').innerText = diceFaces[random];
+    }
+  </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Fun Web Projects</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      padding-top: 50px;
+    }
+    a {
+      display: block;
+      margin: 15px;
+      font-size: 1.2rem;
+      text-decoration: none;
+      color: #0066cc;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎉 My Fun Web Projects</h1>
+  <a href="joke.html">😂 Joke Generator</a>
+  <a href="clock.html">⏰ Digital Clock</a>
+  <a href="dice.html">🎲 Dice Roller</a>
+  <a href="color.html">🎨 Color Generator</a>
+  <a href="compliment.html">💬 Compliment Generator</a>
+</body>
+</html>
+<PRE>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</PRE>
+ <BR>
+    <BR>
+    <BR>
+    <BR>
+    <BR>
+    <BR>
+    <BR>
+    <BR>
+    </BR>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Password Cracking Game</title>
+  <style>
+    body {
+      background-color: #000;
+      color: #0f0;
+      font-family: 'Courier New', monospace;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px;
+    }
+    h1 {
+      color: #0f0;
+    }
+    input, button {
+      background: #111;
+      border: 1px solid #0f0;
+      color: #0f0;
+      padding: 10px;
+      margin-top: 10px;
+      font-size: 1rem;
+      font-family: inherit;
+    }
+    #result {
+      margin-top: 20px;
+      font-size: 1.2rem;
+    }
+    #hint {
+      color: yellow;
+    }
+    select {
+      background: #111;
+      color: #0f0;
+      border: 1px solid #0f0;
+      margin-top: 10px;
+      font-size: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>💻 Password Cracking Game</h1>
+  <label for="difficulty">Select difficulty:</label>
+  <select id="difficulty" onchange="setPassword()">
+    <option value="easy">Easy (3 letters)</option>
+    <option value="medium" selected>Medium (5 letters)</option>
+    <option value="hard">Hard (8 letters)</option>
+  </select>
+
+  <br />
+  <input type="text" id="guess" placeholder="Enter your guess" />
+  <button onclick="checkPassword()">Crack Password</button>
+
+  <div id="result"></div>
+  <div id="hint"></div>
+
+  <script>
+    const wordLists = {
+      easy: ['cat', 'dog', 'sun', 'bug', 'car'],
+      medium: ['apple', 'house', 'cable', 'river', 'table'],
+      hard: ['password', 'elephant', 'keyboard', 'sunshine', 'football']
+    };
+
+    let password = '';
+    let attempts = 0;
+
+    function setPassword() {
+      const difficulty = document.getElementById('difficulty').value;
+      const list = wordLists[difficulty];
+      password = list[Math.floor(Math.random() * list.length)];
+      attempts = 0;
+      document.getElementById('result').innerText = '';
+      document.getElementById('hint').innerText = '';
+      console.log('[DEBUG] Password is:', password); // Remove or comment in production
+    }
+
+    function checkPassword() {
+      const guess = document.getElementById('guess').value.toLowerCase();
+      attempts++;
+      if (guess === password) {
+        document.getElementById('result').innerText = `✅ Access Granted! You cracked it in ${attempts} attempts.`;
+        document.getElementById('hint').innerText = '';
+      } else {
+        let hint = getHint(guess, password);
+        document.getElementById('result').innerText = `❌ Access Denied. Try again.`;
+        document.getElementById('hint').innerText = `Hint: ${hint}`;
+      }
+    }
+
+    function getHint(guess, password) {
+      const minLen = Math.min(guess.length, password.length);
+      let correct = 0;
+      for (let i = 0; i < minLen; i++) {
+        if (guess[i] === password[i]) {
+          correct++;
+        }
+      }
+      return `${correct} correct letter(s) in the right position.`;
+    }
+
+    // Initialize
+    setPassword();
+  </script>
+</body>
+</html>
+<BR>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>MADE BY VARIYAN BHARDWAJ</h1>
+    <PRE>
+<p>all of you be happy and give happy .I VARIYAN MAKE A MUSIC + WEB PAGE + HACKING BOT FOR FUN . 
+MY FULL NAME IS VARIYAN BHARDWAJ.I WANT TO BECOME AN __________SO FOR THAT .
+I AM DOING THIS THINDS SO PLEASE SUPPORT ME I WILL BE GREAT FULL TO YOU FOR THIS....
+    </p>
+    </PRE>
+    <H1>TYPE OF HACKER</H1>
+    <UL id="UL">
+<LI>THERE ARE 3 MAIN TYPE OF HACKER</LI>
+<LI>FIRST-BLACK HAT HACKER</LI>
+<LI>SECOND-WHITE HAT HACKER <head>
+<LI>THIRD-GRAY HAT HACKER</LI>
+  </UL>
+<div id="DIV">
+  <div ID="BOX1"></div>
+  <div id="BOX2"></div>
+    <div id="BOX3"></div>
+    </DIV>
+</head>
+
+
+
+
+<div id="INPUT">
+<input placeholder="WHAT YOU WHAN'T TO BECOME "><br>
+<INPUT type="number"placeholder="CONTACT NUMBER "><br>
+    <a href="https://hackbot.robobotstudio.com/"><button>submit</button></a><br>
+  
+
+
+
+
+</div>
+
+
+  
+    <style>
+P{font-size: 20PX;
+font-style: italic;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+color: chocolate;
+}
+#UL{font-size: 20PX;
+font-style: italic;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+color: rgb(30, 210, 75);
+}
+#BOX1{height:100PX;
+width: 150PX;
+margin: 10PX;
+border: 2PX SOLID BLACK;
+background-image: url("BLACK HAT.JPG");
+background-size: cover;}
+#BOX2{height:100PX;
+width: 150PX;
+margin: 10PX;
+border: 2PX SOLID BLACK;
+background-image: url("WHITE HAT.JPG");
+background-size: contain;}
+#BOX3{height:100PX;
+width: 150PX;
+margin: 10PX;
+border: 2PX SOLID BLACK;
+background-image: url("GRAY HAT.JPG");
+background-size:contain;}
+
+
+
+#DIV{display: flex;
+justify-content: center;
+position: relative;
+left: -450PX;
+bottom: 200PX;}
+
+#input{background-color: aqua;
+color: darksalmon;}
+button{background-color: coral;}
+
+    </style>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fun & Smart Webpage</title>
+  <style>
+    body {
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      margin: 0;
+      padding: 0;
+      transition: background-color 0.4s, color 0.4s;
+      background-color: #f5f5f5;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      text-align: center;
+      max-width: 600px;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      background-color: white;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .joke-box {
+      margin: 1.5rem 0;
+      padding: 1rem;
+      border: 2px dashed #999;
+      border-radius: 10px;
+      min-height: 80px;
+    }
+
+    button {
+      margin: 0.5rem;
+      padding: 10px 20px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+    }
+
+    .dark-mode {
+      background-color: #222;
+      color: #eee;
+    }
+
+    .dark-mode .container {
+      background-color: #333;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🎉 Welcome to the Fun Web!</h1>
+    <p>😄 Life’s too short to not laugh. Hit the button!</p>
+
+    <div class="joke-box" id="joke">Click below for a joke!</div>
+
+    <button onclick="getJoke()">Tell Me a Joke 😂</button>
+    <button onclick="toggleTheme()">Toggle Dark/Light 🌗</button>
+    <button onclick="changeColor()">Surprise Me With Colors 🌈</button>
+  </div>
+
+  <script>
+    const jokes = [
+      "Why don’t scientists trust atoms? Because they make up everything!",
+      "Why did the computer go to therapy? It had too many bytes!",
+      "I told my dog to stay off the couch. Now he’s a cat.",
+      "Parallel lines have so much in common… it’s a shame they’ll never meet.",
+      "Why do programmers prefer dark mode? Because light attracts bugs!"
+    ];
+
+    function getJoke() {
+      const jokeBox = document.getElementById('joke');
+      const randomIndex = Math.floor(Math.random() * jokes.length);
+      jokeBox.innerText = jokes[randomIndex];
+    }
+
+    function toggleTheme() {
+      document.body.classList.toggle('dark-mode');
+    }
+
+    function changeColor() {
+      const r = Math.floor(Math.random() * 256);
+      const g = Math.floor(Math.random() * 256);
+      const b = Math.floor(Math.random() * 256);
+      document.body.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+    }
+  </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Password Strength Checker</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      color: #0f0;
+    }
+
+    input {
+      padding: 10px;
+      font-size: 16px;
+      width: 300px;
+      border-radius: 5px;
+      border: 1px solid #333;
+      margin-bottom: 15px;
+    }
+
+    .strength {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .weak {
+      color: red;
+    }
+
+    .medium {
+      color: orange;
+    }
+
+    .strong {
+      color: limegreen;
+    }
+
+    .bar {
+      height: 10px;
+      width: 300px;
+      background: #444;
+      border-radius: 5px;
+      margin-top: 10px;
+      overflow: hidden;
+    }
+
+    .fill {
+      height: 100%;
+      width: 0;
+      transition: width 0.3s ease;
+    }
+
+    .fill.weak {
+      background: red;
+    }
+
+    .fill.medium {
+      background: orange;
+    }
+
+    .fill.strong {
+      background: limegreen;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🔐 Password Strength Meter</h1>
+  <input type="password" id="password" placeholder="Type your password..." oninput="checkStrength()" />
+  <div class="strength" id="strengthText">Strength: </div>
+
+  <div class="bar">
+    <div class="fill" id="strengthBar"></div>
+  </div>
+
+  <script>
+    function checkStrength() {
+      const pwd = document.getElementById('password').value;
+      const text = document.getElementById('strengthText');
+      const bar = document.getElementById('strengthBar');
+
+      let strength = 0;
+
+      // Basic rules to rate password
+      if (pwd.length >= 6) strength++;
+      if (pwd.match(/[a-z]/) && pwd.match(/[A-Z]/)) strength++;
+      if (pwd.match(/\d/)) strength++;
+      if (pwd.match(/[\W_]/)) strength++;
+      if (pwd.length >= 10) strength++;
+
+      // Set bar and text
+      if (strength <= 2) {
+        text.textContent = 'Strength: Weak';
+        text.className = 'strength weak';
+        bar.style.width = '33%';
+        bar.className = 'fill weak';
+      } else if (strength === 3 || strength === 4) {
+        text.textContent = 'Strength: Medium';
+        text.className = 'strength medium';
+        bar.style.width = '66%';
+        bar.className = 'fill medium';
+      } else {
+        text.textContent = 'Strength: Strong';
+        text.className = 'strength strong';
+        bar.style.width = '100%';
+        bar.className = 'fill strong';
+      }
+    }
+  </script>
+ 
+</body>
+</html>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<PRE>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+</PRE>
