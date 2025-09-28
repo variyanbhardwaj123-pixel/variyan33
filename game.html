@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="game.css">
+</head>
+<body>
+    <div id="tab">  
+    <button id="background">background</button>
+
+
+    <button id="game">start</button>
+    <h3 class="msg">charcter:</h3>
+
+</div>
+
+    <script src="game.js"></script>
+</body>
+</html>
+
+<pre>
+
+
+
+
+</pre>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VARIYAN – Battle of Powers</title>
+
+</head>
+<body>
+
+  <h1>🔥 VARIYAN vs DARKBOT 🔥</h1>
+  <div id="gameArea">
+    <div class="health">
+      <h2>🧑‍🚀 Variyan</h2>
+      <div class="bar" id="playerBar"><div class="bar-inner" id="playerHealth" style="width:100%"></div></div>
+      <p id="playerHPText">100 / 100</p>
+    </div>
+
+    <div class="health">
+      <h2>🤖 DarkBot</h2>
+      <div class="bar" id="enemyBar"><div class="bar-inner" id="enemyHealth" style="width:100%"></div></div>
+      <p id="enemyHPText">100 / 100</p>
+    </div>
+
+    <div class="btns">
+      <button onclick="choose('attack')">⚔️ Attack</button>
+      <button onclick="choose('defend')">🛡️ Defend</button>
+      <button onclick="choose('heal')">💊 Heal</button>
+    </div>
+
+    <div id="log">Choose a power to start!</div>
+  </div>
+
+  
+  <script>
+    function onPlayerWin() {
+  console.log("🏆 Event: Player wins!");
+  winSound.currentTime = 0;
+  winSound.play();
+  showWinEffect();  // if you have this visual
+  // Add more events here if needed
+}
+
+function onPlayerLose() {
+  console.log("💀 Event: Player loses!");
+  loseSound.currentTime = 0;
+  loseSound.play();
+  // Add more effects (like dark screen) here
+}
+
+function onDraw() {
+  console.log("🤝 Event: Draw!");
+  // Optional: sound or effect on draw
+}
+
+  </script>
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Variyan vs DarkBot - Game Description</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #111;
+    color: #eee;
+    padding: 2rem;
+  }
+  h1 {
+    color: #0f0;
+  }
+  #description {
+    background: #222;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    line-height: 1.6;
+    box-shadow: 0 0 15px #0f0;
+  }
+</style>
+</head>
+<body>
+
+<h1>Variyan vs DarkBot</h1>
+<div id="description"></div>
+
+<script>
+const descriptionText = `
+<strong>Variyan vs DarkBot</strong> is an interactive, turn-based fighting game built with HTML, CSS, and JavaScript where the player controls <em>Variyan</em>, a heroic character battling against a computer-controlled enemy named <em>DarkBot</em>.
+
+<h3>How It Works:</h3>
+<ul>
+  <li><strong>Player Actions:</strong> Choose from Attack, Defend, or Heal each turn to outsmart your opponent.</li>
+  <li><strong>Computer AI:</strong> DarkBot randomly selects its move every turn, making battles unpredictable and exciting.</li>
+  <li><strong>Health Bars:</strong> Both characters start with 100 health points, visually displayed and updated live.</li>
+  <li><strong>Win/Lose Conditions:</strong> The first to reduce the other's health to zero wins. A simultaneous knockout is a draw.</li>
+  <li><strong>Visual and Sound Effects:</strong> Real-time updates, action logs, and sounds provide immersive gameplay.</li>
+</ul>
+
+<h3>Why Play This Game?</h3>
+<p>This simple yet strategic game encourages quick thinking and planning, perfect for practicing basic web programming and game logic.</p>
+`;
+
+document.getElementById('description').innerHTML = descriptionText;
+</script>
+<div id="fight-animation" style="display: flex; justify-content: center; gap: 100px; margin-bottom: 20px;">
+  <div id="variya" class="fighter">Variyan<br /><div class="hp-bar"><div id="variya-hp-bar" class="hp-fill"></div></div></div>
+  <div id="darkbot" class="fighter">DarkBot<br /><div class="hp-bar"><div id="darkbot-hp-bar" class="hp-fill"></div></div></div>
+</div>
+
+</body>
+</html>
+
